@@ -1,0 +1,256 @@
+<div class="no-overflow">
+  <p dir="ltr" style="text-align: left">
+    O objetivo desse exercício é praticar os conceitos de Strings e Streams em
+    C++.&nbsp;
+  </p>
+  <p dir="ltr" style="text-align: left">
+    Você deverá implementar uma versão do Jogo
+    <span><strong>Wordle</strong></span
+    >.&nbsp; O objetivo do jogo é adivinhar uma palavra de cinco letras dentro
+    em no máximo cinco tentativas. Você insere uma palavra de cinco letras e o
+    jogo indica se as letras estão corretas e se estão na posição correta, na
+    posição errada ou se não estão na palavra. Com base nessas dicas, você tenta
+    adivinhar a palavra correta antes de acabar suas tentativas.&nbsp;
+  </p>
+  <p dir="ltr" style="text-align: left">
+    Mais especificamente, as instruções são as seguintes:&nbsp;
+  </p>
+  <p dir="ltr" style="text-align: left"></p>
+  <ol>
+    <li>
+      você deverá inicialmente ler um arquivo chamado "<a
+        href="https://virtual.ufmg.br/20251/pluginfile.php/322982/mod_vpl/intro/palavras.txt"
+        >palavras.txt</a
+      >" que contém um conjunto de palavras. A primeira linha contém um inteiro
+      <em>n</em> com o número de palavras do arquivo, seguidas pelas
+      <em>n</em> palavras, uma por linha. Cada palavra possui 5 letras (para
+      simplificar, você pode considerar que a palavra é fornecida em letras
+      maiúsculas e não há caracteres repetidos)&nbsp;.
+    </li>
+    <li>
+      O próximo passo é ler da entrada padrão um número de 1 a n que vai
+      escolher a palavra a ser adivinhada. Vamos chamar essa palavra de
+      <em>chave</em>.
+    </li>
+    <li>
+      A partir daí começa o jogo propriamente dito... Você deverá fornecer como
+      entrada uma palavra de 5 letras. (da mesma forma,&nbsp; você pode
+      considerar que a palavra é fornecida em letras maiúsculas e não há
+      caracteres repetidos).
+    </li>
+    <li>
+      O seu programa deverá analisar a palavra fornecida como entrada em
+      comparação com a <em>chave</em> e, para cada uma das letras, fornecer uma
+      string de saída da seguinte forma (veja um exemplo em seguida):<br />-
+      imprimir a letra em maiúscula caso ela esteja presente na <em>chave </em>e
+      esteja na posição correta.<br />- imprimir a letra em minúscula caso ela
+      esteja presente na&nbsp;<em>chave&nbsp;</em>mas na posição incorreta.<br />-
+      imprimir um * caso a letra não esteja presente. Além disso, as letras que
+      não estão presentes são impressas depois da palavra entre parênteses.<br />(devem
+      ser impressas as letras não presentes de todas as tentativas, sem
+      repetição. coloque um espaço depois da palavra).&nbsp;&nbsp;
+    </li>
+    <li>
+      Caso a palavra seja igual a chave, você deve imprimir "GANHOU!" e terminar
+      o programa. Senão, deve ler uma nova entrada.<br />
+    </li>
+    <li>
+      Depois de 5 tentativas, caso você não tenha acertado a palavra, você deve
+      imprimir: "PERDEU!", seguido da palavra correta, separada por um espaço.
+    </li>
+  </ol>
+  <p></p>
+  <p dir="ltr" style="text-align: left">
+    <strong>Exemplo 1 (E: Entrada, S: Saída)</strong>
+  </p>
+  <p dir="ltr"></p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">(E/S)</th>
+        <th scope="col">&nbsp;Valor</th>
+        <th scope="col">&nbsp;Explicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E</td>
+        <td>7</td>
+        <td>Palavra #7 do Arquivo. (No caso a palavra é "MUITO")</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>TALCO</td>
+        <td>Primeira tentativa. Palavra TALCO</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>t***O (ALC)</td>
+        <td>
+          Saída indicando que a letra T está presente mas no lugar errado, a
+          letra O está presente e no lugar certo e as letras A, L, C não estão
+          presentes
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>PERTO</td>
+        <td>Segunda tentativa. Palavra PERTO</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>***TO (ALCPER)</td>
+        <td>
+          Saída indicando que as letras T e O estão presentes e no lugar certo e
+          as letras A, L, C (da primeira tentativa)<br />e P, E, R da segunda
+          não estão presentes.
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>MISTO</td>
+        <td>
+          <span style="white-space: normal"
+            >Terceira tentativa. Palavra MISTO</span
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>Mi*TO (ALCPERS)</td>
+        <td>
+          Saída indicando que a letra I está presente mas no lugar errado, as
+          letras M, T e O estão presentes e no lugar <br />certo e as letras A,
+          L, C (da primeira tentativa), P, E, R da segunda e S da terceira não
+          estão presentes.
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>MUITO</td>
+        <td>Terceira tentativa. Palavra MUITO</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>MUITO (ALCPERS)</td>
+        <td>
+          Saída indicando que todas as letras estão corretas e no lugar certo e
+          as letras A, L, C (da primeira tentativa), <br />P, E, R da segunda e
+          S da terceira não estão presentes
+        </td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>GANHOU!</td>
+        <td>Impressão do resultado final</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <p dir="ltr"><strong>Exemplo 2 (E: Entrada, S: Saída)</strong></p>
+  <p dir="ltr"></p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">(E/S)</th>
+        <th scope="col">&nbsp;Valor</th>
+        <th scope="col">&nbsp;Explicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E</td>
+        <td>26</td>
+        <td>Palavra #26 do Arquivo. (No caso a palavra é "ZEBRA")</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>QUILO</td>
+        <td>Primeira tentativa. Palavra QUILO</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>***** (QUILO)<br /></td>
+        <td>Saída indicando que nenhuma letra está presente</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>CHAVE</td>
+        <td>Segunda tentativa. Palavra CHAVE</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>**a*e (QUILOCHV)</td>
+        <td>
+          Saída indicando que as letras A e E estão presentes mas no lugar
+          errado. C, H, V não estão presentes e foram adicionadas<br />à lista
+          de erros.
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>ANTES</td>
+        <td>Terceira tentativa. Palavra ANTES</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>a**e* (QUILOCHVNTS)<br /></td>
+        <td>
+          Saída indicando que as letras A e E estão presentes mas continuam
+          lugar errado. N, T, S não estão presentes e foram <br />adicionadas à
+          lista de erros.
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>VERGA</td>
+        <td>Quarta tentativa. Palavra VERGA</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>*Er*A (QUILOCHVNTSG)<br /></td>
+        <td>
+          Saída indicando que as letras A e E estão presentes e no lugar e a
+          letra r está presente mas fora do lugar. G não está <br />presente e
+          foi adicionada à lista de erros. <strong>Obs.</strong>&nbsp;a letra V
+          já estava presente na lista de erros e não foi adicionada novamente.
+        </td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>&nbsp;PEDRA</td>
+        <td>Quinta e última tentativa. Palavra PEDRA</td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>&nbsp;*E*RA (QUILOCHVNTSGPD)</td>
+        <td>
+          Saída indicando que as letras A, E e R estão presentes e no lugar
+          certo. P, D&nbsp; não estão presentes e foram<br />adicionadas à lista
+          de erros.
+        </td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>PERDEU! ZEBRA<br /></td>
+        <td>
+          Como não acertou em 5 tentativas, imprimiu a palavra "PERDEU!" seguida
+          de um espaço e a chave correta.&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br /><strong>Observações Finais:<br /></strong
+  ><span
+    >- É obrigatório o uso de Strings e Streams. char *, printf, scanf e
+    similares estão vetados!<br />- A correção é feita de forma automática. Logo
+    a sua saída deve seguir o padrão informado de forma exata.<br /></span
+  >- O método "find" da classe string pode ser útil.&nbsp;<a
+    href="https://cplusplus.com/reference/string/string/find/"
+    >https://cplusplus.com/reference/string/string/find/</a
+  ><br />- No jogo original, só são aceitas palavras válidas nas tentativas.
+  Você pode experimentar o jogo original, com 6 tentativas, em&nbsp;<a
+    href="https://wordlegame.org/pt"
+    ><span>https://wordlegame.org/pt</span></a
+  ><br /><br /><br />
+</div>
