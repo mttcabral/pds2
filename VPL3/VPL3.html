@@ -1,0 +1,754 @@
+<div class="no-overflow">
+  <p dir="ltr" style="text-align: left"></p>
+  <p>
+    O Objetivo desse projeto é praticar os conceitos de Tipos Abstratos de Dados
+    (TAD) e Modularização.
+  </p>
+  <p>
+    <span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >Você foi contratado por uma empresa de transporte publico para
+      implementar um sistema de forma a monitorar as suas operações.
+      Basicamente, na central de ônibus os operadores podem cadastrar novos
+      ônibus, subir e descer pessoas no ônibus e fazer transferência de pessoas
+      entre os ônibus. Para implementar o seu sistema você vai criar 2 TADs e um
+      arquivo main:</span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >&nbsp;</span
+    >
+  </p>
+  <p>
+    <span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR" style=""><strong>TAD Onibus</strong></span></span
+    >
+  </p>
+  <p></p>
+
+  <p>
+    <span lang="PT-BR"
+      >O TAD Empresa armazena os dados da conta: placa (string), capacidade
+      máxima&nbsp;</span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >(int), e lotação atual (int) e possui as seguintes operações:</span
+    >
+  </p>
+  <p>
+    <span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR" style=""
+        >-&nbsp;<strong>Construtor</strong></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: inicializa um novo ônibus com uma placa (string) e capacidade máxima de
+      passageiros (int) como parâmetro.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">-&nbsp;<strong>subir_passageiros</strong></span></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: recebe um valor inteiro como parâmetro e adiciona esses passageiros no
+      total de passageiros.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR"
+        ><span>-&nbsp;</span><strong>descer_passageiros</strong></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: recebe um valor como parâmetro e subtrai do saldo da conta.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR"
+        ><span>-&nbsp;</span><strong>transfere_passageiros:</strong></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+    >
+      recebe um ponteiro a outro ônibus e um valor inteiro como parâmetros. O
+      valor inteiro representa a quantidade de passageiros que vão ser
+      transferidos entre o ônibus atual e segundo próximo ônibus.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">-&nbsp;<strong>imprimir_estado:</strong></span></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+    >
+      imprime em uma linha a placa, a lotação atual e o total máximo de
+      passageiros, com um&nbsp;endl&nbsp;no final no seguinte
+      formato:&nbsp;</span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >&lt;PLACA&gt; (&lt;LOTACAO_ATUAL&gt;/&lt;MAX_LOTACAO&gt;). Exemplo:
+      "</span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >AAA123 (10/20)".</span
+    >
+  </p>
+  <p></p>
+  <p></p>
+
+  <p>
+    <strong><span lang="PT-BR">TAD Empresa</span></strong
+    ><span lang="PT-BR"></span>
+  </p>
+
+  <p>
+    <span lang="PT-BR"
+      >O TAD empresa é usada para armazenar os registros dos ônibus.
+      Basicamente, ele vai ter como atributos um número inteiro que armazena o
+      número total de ônibus cadastrados e um vetor com apontadores para os
+      ônibus. (Para simplificar, você pode considerar que o número máximo de
+      ônibus é 20, e usar um vetor simples com alocação estática). O TAD Empresa
+      possui as seguintes operações:</span
+    >
+  </p>
+
+  <p>
+    <span
+      ><span lang="PT-BR" style=""
+        >-&nbsp;<strong>Construtor</strong></span
+      ></span
+    ><span lang="PT-BR"
+      >: inicializa o TAD colocado o valor 0 no número de ônibus cadastrados e
+      inicializando todos os elementos do vetor de veículos com&nbsp;nullptr.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >-&nbsp;</span
+    ><strong
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >adicionar_onibus</strong
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: registra um novo ônibus no sistema com a placa e lotação máxima
+      passados como parâmetro e a coloca no vetor de veículos, incrementando
+      também o número de ônibus. Note que não pode haver veículos com placas
+      repetidas, portanto o seu método deve retornar um apontador para o novo
+      ônibus registrado ou, em caso de falhas,&nbsp;nullptr.&nbsp;&nbsp;<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">-&nbsp;<strong>busca_onibus</strong></span></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: recebe a placa de um veículo e faz uma pesquisa por um ônibus com essa
+      placa no vetor de ônibus, retornando um apontador para o veículo
+      encontrada ou&nbsp;nullptr&nbsp;caso não exista.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >-&nbsp;</span
+    ><strong
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >imprimir_estado</strong
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: imprime as informações de todos os ônibus cadastrados na empresa
+      (placa, lotação atual, lotação máxima), um ônibus por linha.</span
+    >
+  </p>
+  <p></p>
+
+  <p>
+    <span lang="PT-BR">&nbsp;</span
+    ><strong
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">&nbsp;Main:</span></strong
+    >
+  </p>
+  <p></p>
+
+  <p>
+    <span lang="PT-BR"
+      >O seu programa principal faz a gerência das operações da empresa. Ele vai
+      ser um basicamente um loop que lê comandos da entrada (C, S, D, T, I, F)
+      juntamente com os parâmetros e faz as operações de acordo. Para cada
+      comando, o sistema imprime uma mensagem com uma quebra de linha (endln) no
+      final. Importante: as mensagens devem ser exatamente como especificadas
+      abaixo para evitar erros na correção automática. As operações são:</span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >&nbsp;</span
+    >
+  </p>
+  <p></p>
+
+  <p>
+    <span
+      ><span lang="PT-BR" style=""
+        >-&nbsp;<strong>C &lt;placa&gt; &lt;lotação&gt;:</strong></span
+      ></span
+    ><span lang="PT-BR">
+      cadastra um novo ônibus com a placa e lotação máxima indicados. Deve ser
+      impresso: “novo onibus cadastrado” em caso de sucesso ou “</span
+    >ERRO : onibus repetido<span lang="PT-BR">” em caso de falha.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR"
+        >-&nbsp;<strong>S &lt;placa&gt; &lt;num pessoas&gt;:</strong></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+    >
+      registra que X pessoas subiram no onibus com a placa sinalizada. Você
+      poderá considerar que os valores fornecidos serão sempre positivos.
+      Considerar a lotação máxima do veiculo: se o numero de pessoas que entrar
+      agora supera a lotação máxima, não deixar ninguém novo subir e vai
+      precisar mostrar a mensagem “ERRO : onibus lotado”. Deve ser impresso:
+      “passageiros subiram com sucesso” em caso de sucesso ou “ERRO : onibus
+      inexistente” caso a placa do veiculo seja inválida.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR"
+        >-&nbsp;<strong>D &lt;placa&gt; &lt;num pessoas&gt;:</strong></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+    >
+      registra que X pessoas desceram no onibus com a placa sinalizada. Você
+      poderá considerar que os valores fornecidos serão sempre positivos.
+      Considerar que a lotação atual não pode ser menor a 0: se o numero de
+      pessoas que sair agora faz a lotação do veiculo ficar menor a zero, não
+      deixar ninguém descer e vai precisar mostrar a mensagem “ERRO : </span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >faltam passageiros</span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >”. Deve ser impresso: “passageiros </span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >desceram </span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >com sucesso” em caso de sucesso ou “ERRO : onibus inexistente” caso a
+      placa do veiculo seja inválida.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR"
+        >-&nbsp;<strong
+          >T &lt;placa1&gt; &lt;placa2&gt; &lt;num pessoas&gt;:</strong
+        ></span
+      ></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+    >
+      transfere pessoas de um ônibus &lt;placa1&gt; a outro &lt;placa2&gt;. Você
+      poderá considerar que os valores fornecidos serão sempre positivos. Deve
+      ser impresso: “transferencia de passageiros efetuada” em caso de sucesso
+      ou “ERRO : onibus inexistente” caso um das placas dos onibus indicadas
+      sejam inválidas ou “ERRO : transferencia cancelada” se tem alguma situação
+      de lotação invalida.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">-&nbsp;<strong>I</strong></span></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: lista as informações de todos os ônibus cadastrados (placa, lotação
+      atual, lotação máxima), um ônibus por linha.<br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span lang="PT-BR">- <b>F</b></span></span
+    ><span
+      lang="PT-BR"
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      >: Finaliza a execução do programa.</span
+    >
+  </p>
+  <p></p>
+
+  <p></p>
+
+  <p>
+    <span lang="PT-BR"><br /></span>
+  </p>
+  <p>
+    <span lang="PT-BR"
+      >Segue abaixo um exemplo de uma execução do Sistema:</span
+    >
+  </p>
+
+  <p>
+    <span lang="PT-BR"
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >C OLX123 11</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >novo onibus cadastrado</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >C OLX123 12</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >ERRO : onibus repetido</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono">I</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >OLX123 (0/11)</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >S OLX123 10</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >passageiros subiram com sucesso</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >D OLX123 5</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >passageiros desceram com sucesso</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono">I</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >OLX123 (5/11)</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >C BBB222 10</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >novo onibus cadastrado</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >S BBB222 2</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >passageiros subiram com sucesso</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono">I</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >OLX123 (5/11)</span
+      ><br /></span
+    ><span
+      style="
+        font-size: 0.9375rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+      "
+      ><span class="" style="font-family: 'Courier New', Courier, mono"
+        >BBB222 (2/10)</span
+      ><br /></span
+    ><span
+      style="font-size: 0.9375rem; font-family: 'Courier New', Courier, mono"
+      class=""
+      >F</span
+    ><span
+      style="font-size: 0.9375rem; font-family: 'Courier New', Courier, mono"
+      class=""
+      >&nbsp;</span
+    >
+  </p>
+  <p></p>
+
+  <p>
+    <span lang="PT-BR"
+      ><strong>Você deverá submeter 5 arquivos:</strong> Onibus.hpp, Onibus.cpp,
+      Empresa.hpp, Empresa.cpp e main.cpp. No seu programa principal, você não
+      deverá acessar diretamente os atributos dos seus TADs. Todo o acesso
+      deverá ser feito através dos métodos implementados.</span
+    >
+  </p>
+
+  <p><span lang="PT-BR">&nbsp;</span></p>
+
+  <p><span lang="PT-BR">&nbsp;</span></p>
+  <br />
+  <p></p>
+</div>
