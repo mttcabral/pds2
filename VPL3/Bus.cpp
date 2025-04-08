@@ -25,6 +25,15 @@ void Bus::removePassenger(unsigned int passengersToRemove)
     }
 }
 
+void Bus::transferPassenger(Bus *destinationBus, unsigned int passengersToTransfer)
+{
+    if ((destinationBus->currentPassengersCount + passengersToTransfer) <= destinationBus->passengerCapacity)
+    {
+        destinationBus->currentPassengersCount + passengersToTransfer;
+        currentPassengersCount -= passengersToTransfer;
+    }
+}
+
 void Bus::printBusStatus()
 {
     std::cout << licensePlate << " (" << currentPassengersCount << "/" << passengerCapacity << ")" << std::endl;
