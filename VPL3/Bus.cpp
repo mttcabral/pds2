@@ -29,7 +29,7 @@ void Bus::transferPassenger(Bus *destinationBus, unsigned int passengersToTransf
 {
     if ((destinationBus->currentPassengersCount + passengersToTransfer) <= destinationBus->passengerCapacity)
     {
-        destinationBus->currentPassengersCount + passengersToTransfer;
+        destinationBus->currentPassengersCount += passengersToTransfer;
         currentPassengersCount -= passengersToTransfer;
     }
 }
