@@ -1,7 +1,7 @@
 #ifndef COMPANY_H
 #define COMPANY_H
 
-#include <Bus.hpp>
+#include "Bus.hpp"
 
 struct Company
 {
