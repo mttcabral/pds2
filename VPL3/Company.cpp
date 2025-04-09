@@ -10,6 +10,23 @@ Company::Company()
     }
 }
 
+Bus *Company::addBus(std::string licensePlate, unsigned int passengerCapacity)
+{
+    if (searchBus(licensePlate) == nullptr)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            if (bus[i] == nullptr)
+            {
+                bus[i] = new Bus(licensePlate, passengerCapacity);
+                return bus[i];
+            }
+        }
+    }
+
+    return nullptr;
+}
+
 Bus *Company::searchBus(std::string licensePlate)
 {
     for (int i = 0; i < 20; i++)
