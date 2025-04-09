@@ -39,3 +39,14 @@ Bus *Company::searchBus(std::string licensePlate)
 
     return nullptr;
 }
+
+void Company::printAllBusStatus()
+{
+    for (int i = 0; i < 20; i++)
+    {
+        if (bus[i] != nullptr)
+        {
+            std::cout << bus[i]->licensePlate << " (" << bus[i]->currentPassengersCount << "/" << bus[i]->passengerCapacity << ")" << std::endl;
+        }
+    }
+}
