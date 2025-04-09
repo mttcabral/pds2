@@ -1,4 +1,5 @@
 #include "Company.hpp"
+#include <iostream>
 
 Company::Company()
 {
@@ -13,7 +14,7 @@ Bus *Company::searchBus(std::string licensePlate)
 {
     for (int i = 0; i < 20; i++)
     {
-        if (bus[i]->licensePlate == licensePlate)
+        if (bus[i] != nullptr && bus[i]->licensePlate == licensePlate)
         {
             return bus[i];
         }
