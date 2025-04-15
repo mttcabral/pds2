@@ -9,29 +9,38 @@ Bus::Bus(std::string licensePlate, unsigned int passengerCapacity)
 {
 }
 
-void Bus::addPassenger(unsigned int passengersToAdd)
+bool Bus::addPassenger(unsigned int passengersToAdd)
 {
     if ((currentPassengersCount + passengersToAdd) <= passengerCapacity)
     {
         currentPassengersCount += passengersToAdd;
+        return true;
     }
+
+    return false;
 }
 
-void Bus::removePassenger(unsigned int passengersToRemove)
+bool Bus::removePassenger(unsigned int passengersToRemove)
 {
     if (passengersToRemove <= currentPassengersCount)
     {
         currentPassengersCount -= passengersToRemove;
+        return true;
     }
+
+    return false;
 }
 
-void Bus::transferPassenger(Bus *destinationBus, unsigned int passengersToTransfer)
+bool Bus::transferPassenger(Bus *destinationBus, unsigned int passengersToTransfer)
 {
     if ((destinationBus->currentPassengersCount + passengersToTransfer) <= destinationBus->passengerCapacity)
     {
         destinationBus->currentPassengersCount += passengersToTransfer;
         currentPassengersCount -= passengersToTransfer;
+        return true;
     }
+
+    return false;
 }
 
 void Bus::printBusStatus()

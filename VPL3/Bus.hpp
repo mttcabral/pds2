@@ -10,9 +10,9 @@ struct Bus
     unsigned int currentPassengersCount;
 
     Bus(std::string, unsigned int);
-    void addPassenger(unsigned int);
-    void removePassenger(unsigned int);
-    void transferPassenger(Bus *, unsigned int);
+    bool addPassenger(unsigned int);
+    bool removePassenger(unsigned int);
+    bool transferPassenger(Bus *, unsigned int);
     void printBusStatus();
 };
 
