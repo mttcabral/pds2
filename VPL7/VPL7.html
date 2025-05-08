@@ -1,0 +1,97 @@
+<div class="box py-3 generalbox">
+  <div class="no-overflow">
+    <p dir="ltr" style="text-align: left">
+      O objetivo desse exercício é praticar alguns conceitos básicos de classes
+      e objetos, bem como do container list da VPL.
+    </p>
+    <p dir="ltr" style="text-align: left">
+      Você deverá criar uma classe com um nome a sua escolha. Cada objeto dessa
+      classe tem um atributo id do tipo inteiro. O valor desse campo pode ser
+      atribuido de duas formas diferentes:
+    </p>
+    <p dir="ltr" style="text-align: left">
+      * Poderá ser gerado de forma automática e incremental quando um novo
+      objeto for criado (O primeiro objeto vai ter o id 1, o segundo o id 2,
+      etc).&nbsp;
+    </p>
+    <p dir="ltr" style="text-align: left">
+      * Poderá ser fornecido como parâmetro. Nesse caso, só ids negativos podem
+      ser fornecidos e o id automático não é alterado.
+    </p>
+    <p dir="ltr" style="text-align: left">
+      Além disso, a sua classe deverá ter um atributo que conta o número de
+      objetos existentes. Esse atributo deverá ser incrementado no construtor e
+      decrementado do destrutor. Todos os atributos da sua classe devem ser
+      privados. Sua classe deverá ter métodos para retornar o id de um objeto e
+      também o número de objetos existentes no momento. Sua classe também deve
+      ter um método que retorna o endereço de memória no qual o objeto está
+      alocado.&nbsp;&nbsp;
+    </p>
+    <p dir="ltr" style="text-align: left">
+      O seu programa principal deverá criar uma lista de apontadores para
+      objetos e receber comandos para manipular essa lista. Mas especificamente,
+      el<span style="font-size: 0.9375rem"
+        >e vai ser um&nbsp; loop que lê comandos da entrada (A, C, R, N, P, L,
+        E) juntamente com eventuais parâmetros e faz as operações de acordo.
+        Para cada comando, o sistema imprime uma mensagem com uma quebra de
+        linha (endln) no final. Importante: as mensagens devem ser exatamente
+        como especificado abaixo para evitar erros na correção automática.&nbsp;
+        As operações são:</span
+      >
+    </p>
+    <p>
+      A: adiciona um novo objeto com id automático no final da lista. Deve ser
+      impresso o id e o endereço de memória do objeto criado.
+    </p>
+    <p></p>
+    <p>
+      C: adiciona um novo objeto com id fornecido no início da lista. Deve ser
+      impresso o id e o endereço de memória do objeto criado ou "ERRO" caso o id
+      não seja negativo.
+    </p>
+    <p>
+      R: remove (e deleta) um objeto da frente da lista.&nbsp;Deve ser impresso
+      o id e o endereço endereço de memória do objeto removido. Caso a lista
+      esteja vazia deve ser impresso "ERRO"
+    </p>
+    <p>N: imprime o valor do contador com número de objetos existentes.</p>
+    <p>
+      P &lt;i&gt;: imprime o id e o endereço de memória do i-ésimo elemento da
+      lista. Se i for um valor inválido (menor que 1 ou maior que o número de
+      elementos) seu programa deverá imprimir "ERRO"
+    </p>
+    <p>
+      L: Imprime, para todos os elementos da lista, o id e o endereço de memória
+      do objeto, sendo um elemento por linha com quebra de linha no final.&nbsp;
+    </p>
+    <p>E: termina a execução do programa.</p>
+    <p>
+      A sequência abaixo mostra um exemplo de entrada com a respectiva saída (os
+      endereços podem variar de acordo com a execução):
+    </p>
+    <pre><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono;"><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">A</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">C -10
+C 5</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">A
+L</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">R</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">A</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">R</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">A</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">N</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">P 5</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">P 3</span><br></span><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><span class="" style="font-family: &quot;Courier New&quot;, Courier, mono; font-size: medium;">L</span><br></span><span style="font-size: medium; font-family: &quot;Courier New&quot;, Courier, mono;" class="">E</span></pre>
+    <pre><span style="font-size: 0.9375rem; font-family: &quot;Courier New&quot;, Courier, mono;" class=""><br></span><span class="" style="font-size: medium; font-family: &quot;Courier New&quot;, Courier, mono;">1 0x5627ff3f02c0
+-10 0x5627ff3f0710
+ERRO
+2 0x5627ff3f0750
+-10 0x5627ff3f0710
+1 0x5627ff3f02c0
+2 0x5627ff3f0750
+-10 0x5627ff3f0710
+3 0x5627ff3f0710
+1 0x5627ff3f02c0
+4 0x5627ff3f02c0
+3
+ERRO
+4 0x5627ff3f02c0
+2 0x5627ff3f0750
+3 0x5627ff3f0710
+4 0x5627ff3f02c0</span><br></pre>
+    Para simplificar, você pode colocar a implementação da sua classe e o seu
+    main em um mesmo arquivo.&nbsp;<br /><br />
+    <p></p>
+    <p></p>
+  </div>
+</div>
