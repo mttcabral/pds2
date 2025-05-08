@@ -51,5 +51,9 @@ int main()
         studentsVector.push_back(student);
     }
 
+    // Sort students by alphabetic order
+    std::sort(studentsVector.begin(), studentsVector.end(), [](const Student &a, Student &b)
+              { return a.getName() < b.getName(); });
+
     return 0;
 }
