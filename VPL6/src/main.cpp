@@ -55,5 +55,17 @@ int main()
     std::sort(studentsVector.begin(), studentsVector.end(), [](const Student &a, Student &b)
               { return a.getName() < b.getName(); });
 
+    // Print all students allocated in studentsVector
+    for (Student s : studentsVector)
+    {
+        std::cout << s.getEnrollmentNumber() << ' ' << s.getName() << ' ';
+        for (int i : s.getGrades())
+        {
+            std::cout << i << ' ';
+        }
+        std::cout << std::endl;
+        std::cout << std::fixed << std::setprecision(2) << s.averageGrade() << ' ' << s.maxGrade() << ' ' << s.minGrade() << std::endl;
+    }
+
     return 0;
 }
