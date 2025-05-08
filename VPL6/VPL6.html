@@ -1,0 +1,77 @@
+<div class="box py-3 generalbox">
+  <div class="no-overflow">
+    <p dir="ltr" style="text-align: left"></p>
+    <p>
+      O objetivo desse exercício é começar a praticar alguns conceitos básicos
+      de classes e também aplicar utilizar containers, iteradores e algoritmos
+      da STL.&nbsp;
+    </p>
+    <p>
+      Você foi contratado pela UFMG para fazer um controle dos alunos
+      matriculados. Para isso você vai ter que implementar uma classe com os
+      dados e as operações sobre alunos e um programa (main) que faz a leitura
+      dos dados e emite um relatório.&nbsp;
+    </p>
+    <p><strong>Classe Aluno:</strong></p>
+    <p>
+      Você deverá implementar uma classe "Aluno" que armazena o nome (string),
+      número de matrícula (int), e um vetor de tamanho indeterminado com notas
+      obtidas pelo aluno (notas com valores inteiros). O seu TAD deverá possuir
+      métodos para calcular a média das notas, retornar a nota máxima e mínima,
+      além de métodos acessórios, como construtor, métodos para acesso aos
+      dados, etc.&nbsp; Use um container do tipo vector e algoritmos da STL para
+      encontrar a maior e menor nota.&nbsp;
+    </p>
+    <p><strong>Main:&nbsp;</strong></p>
+    <p>
+      No seu arquivo main, você deverá ler dos dados de um conjunto de alunos e
+      depois imprimir um relatório. Mais especificamente, você deverá ler, para
+      cada aluno, o nome, número de matrícula e o conjunto de notas. Você não
+      tem informação sobre o número de notas de cada aluno, portanto use o flag
+      -1 para terminar a leitura das notas. Da mesma forma, você não tem
+      informações sobre o número de alunos. Portanto, use o flag "END" para
+      terminar a entrada de dados. Você pode considerar que o nome será
+      fornecido em uma linha, o número de matrícula na linha seguinte e as notas
+      na terceira linha, separadas por espaço (ver exemplo abaixo).&nbsp;
+    </p>
+    <p>
+      Como saída, você deverá imprimir para cada aluno: na primeira linha, o
+      número de matrícula, nome e o vetor de notas. Na segunda linha, a média
+      das notas (com duas casas decimais) a maior nota e menor nota. Os alunos
+      deveram ser impressos em ordem alfabética (use o algoritmo sort da STL
+      para isso).&nbsp;
+    </p>
+
+    <p><strong>Exemplo</strong></p>
+    <p>Entrada:</p>
+    <p>
+      Luiz<br /><span style="font-size: 0.9375rem">2021153<br /></span
+      ><span style="font-size: 0.9375rem">60 75 90 80 75 -1<br /></span
+      ><span style="font-size: 0.9375rem">Joao<br /></span
+      ><span style="font-size: 0.9375rem">2022098<br /></span
+      ><span style="font-size: 0.9375rem">85 95 90 -1<br /></span
+      ><span style="font-size: 0.9375rem">Maria<br /></span
+      ><span style="font-size: 0.9375rem">2022051<br /></span
+      ><span style="font-size: 0.9375rem">90 100 100 90 -1<br /></span
+      ><span style="font-size: 0.9375rem">END</span>
+    </p>
+    <p><span style="font-size: 0.9375rem">Saída:</span></p>
+    <p>
+      2022098 Joao 85 95 90&nbsp;<br /><span style="font-size: 0.9375rem"
+        >90.00 95 85<br /></span
+      ><span style="font-size: 0.9375rem"
+        >2021153 Luiz 60 75 90 80 75&nbsp;<br /></span
+      ><span style="font-size: 0.9375rem">76.00 90 75<br /></span
+      ><span style="font-size: 0.9375rem"
+        >2022051 Maria 90 100 100 90&nbsp;<br /></span
+      ><span style="font-size: 0.9375rem">95.00 100 90</span>
+    </p>
+    <p>
+      Você deverá submeter 3 arquivos: aluno.hpp, aluno.cpp, e main.cpp. No seu
+      programa principal, você não deverá acessar diretamente os atributos dos
+      seu TAD. Todo o acesso deverá ser feito através dos métodos implementados.
+    </p>
+    <br />
+    <p></p>
+  </div>
+</div>
